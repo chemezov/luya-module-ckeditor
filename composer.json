@@ -24,7 +24,7 @@
         "php": ">=7.4",
         "yiisoft/yii2": "~2.0.0",
         "luyadev/luya-core" : "*",
-        "luyadev/luya-module-cms": "*",
+        "luyadev/luya-module-cms": "*"
     },
     "autoload": {
         "psr-4": {
