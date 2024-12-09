@@ -28,7 +28,7 @@ class CKEditorBlock extends PhpBlock
      */
     public function name()
     {
-        return 'Редактор (new)';
+        return 'Редактор';
     }
 
     /**
