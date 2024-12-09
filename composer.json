@@ -1,0 +1,34 @@
+{
+    "name": "chemezov/luya-module-ckeditor",
+    "description": "LUYA module with CKEditor block",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "luya",
+        "module",
+        "ckeditor",
+        "wysiwyg",
+        "content",
+        "block",
+        "cms"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Mikhail Chemezov",
+            "email": "michlenanosoft@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "~2.0.0",
+        "luyadev/luya-core" : "*",
+        "luyadev/luya-module-cms": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "chemezov\\luya\\ckeditor\\": "src/"
+        }
+    }
+}
