@@ -4,6 +4,7 @@ namespace chemezov\luya\ckeditor;
 
 use chemezov\luya\ckeditor\bundles\AdminAsset;
 use chemezov\luya\ckeditor\bundles\CKEditorSelfHosedAsset;
+use luya\web\Request;
 use yii\base\Application;
 
 /**
@@ -43,9 +44,11 @@ class Module extends \luya\admin\base\Module
 
     public function luyaBootstrap(Application $app)
     {
-        $editorConfig = array_merge(['licenseKey' => $this->licenseKey], $this->editorConfig);
+        if (($app->request instanceof Request) && $app->request->isAdmin) {
+            $editorConfig = array_merge(['licenseKey' => $this->licenseKey], $this->editorConfig);
 
-        $app->view->registerJsVar('ckeditorConfig', $editorConfig);
+            $app->view->registerJsVar('ckeditorConfig', $editorConfig);
+        }
 
         parent::luyaBootstrap($app);
     }
